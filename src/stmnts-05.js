@@ -30,7 +30,7 @@ function isEven(num) {
  * @returns {boolean} - true if value is a negative number, false otherwise
  */
 function isNegative(value) {
-  return !Object.is(Math.abs(value), +value)// write your code here & return
+  return !Object.is(Math.abs(value), +value)
 }
 
 module.exports = {

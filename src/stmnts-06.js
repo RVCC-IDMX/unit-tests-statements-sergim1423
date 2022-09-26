@@ -12,7 +12,7 @@
  * @returns {boolean} true if str is a string
  */
 function isString(str) {
-  // write your code here & return
+  return Object.prototype.toString.call(str) === "[object String]"
 }
 
 /**
@@ -21,7 +21,7 @@ function isString(str) {
  * @returns {boolean}  - true if str is blank (empty)
  */
 function isBlank(str) {
-  // write your code here & return
+  return (!str || str.length === 0);
 }
 
 /**
@@ -33,7 +33,13 @@ function isBlank(str) {
  * @returns {string} - the name of the person
  */
 function sayHelloOrBye(name, num) {
-  // write your code here & return
+  let result;
+  if (num <= 0) {
+    result = "Hello "
+  } else {
+    result = "Bye "
+  }
+  return result + name
 }
 
 /**
@@ -44,7 +50,10 @@ function sayHelloOrBye(name, num) {
  * ? [JavaScript: The Definitive Guide, Chapter 4.9.2](https://bit.ly/3Cvjcw2)
  */
 function compareStrings(str1, str2) {
-  // write your code here & return
+  if (str1.length !== str2.length) {
+    return false;
+  }
+  return str1.localeCompare(str2) === 0;
 }
 
 module.exports = {
