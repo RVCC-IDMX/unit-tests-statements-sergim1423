@@ -12,7 +12,7 @@
  * @returns {number} - temperature in Celsius
  */
 function fahrenheitToCelsius(fahrenheit) {
-  // write your code here & return
+  return Math.trunc((fahrenheit - 32) * 5 / 9)  // write your code here & return (32°F − 32) × 5/9 = 0°C
 }
 
 /**
@@ -21,7 +21,7 @@ function fahrenheitToCelsius(fahrenheit) {
  * @returns {number} - temperature in Fahrenheit
  */
 function celsiusToFahrenheit(celsius) {
-  // write your code here & return
+  return Math.fround(celsius * 9 / 5) + 32 // write your code here & return
 }
 
 module.exports = {
