@@ -75,7 +75,12 @@ function numberOfOdds(num) {
  * ? For example, num is 4 then return 10 because 1 + 2 + 3 + 4 = 10.
  */
 function addUpTheNumbers(num) {
+  let element = 0;
+  for (let index = 0; index <= num; index++) {
+    element += index;
 
+  }
+  return element;
 }
 
 
@@ -96,7 +101,23 @@ function addUpTheNumbers(num) {
  * ?
  */
 function gradeGenerator(score) {
-  // write your code here & return
+  let letterGrade;
+  if (score < 60) {
+    letterGrade = "F"
+  }
+  else if (score < 70) {
+    letterGrade = "D"
+  }
+  else if (score < 80) {
+    letterGrade = "C"
+  }
+  else if (score < 90) {
+    letterGrade = "B"
+  }
+  else if (score <= 100) {
+    letterGrade = "A"
+  }
+  return letterGrade;
 }
 
 /**
@@ -116,9 +137,21 @@ function gradeGenerator(score) {
  * ? it's 'an A' (not a A) and 'an F' (not a F)
  */
 function getGrade(name, score) {
-  // write your code here & return
+  let letterGrade = gradeGenerator(score);
+  let studentName = name;
+  let sentence;
+  if (letterGrade == 'A') {
+    sentence = `${studentName} got an ${letterGrade}`;
+  }
+  else if (letterGrade == 'F') {
+    sentence = `${studentName} got an ${letterGrade}`;
+  }
+  else {
+    sentence = `${studentName} got a ${letterGrade}`;
+  }
+  return sentence;
 }
-
+// (letterGrade == "C" || "B" || "D")
 module.exports = {
   logicalAnd,
   logicalOr,
