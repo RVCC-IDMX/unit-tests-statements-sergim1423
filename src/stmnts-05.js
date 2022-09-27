@@ -12,7 +12,7 @@
  * @returns {boolean} - true if num is odd, false otherwise
  */
 function isOdd(num) {
-  return !!(num % 2)
+  return (num % 2 !== 0)
 }
 
 /**
@@ -21,7 +21,7 @@ function isOdd(num) {
  * @returns {boolean} - true if num is even, false otherwise
  */
 function isEven(num) {
-  return !(num % 2)
+  return (num % 2 === 0)
 }
 
 /**
